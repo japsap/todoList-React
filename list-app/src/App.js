@@ -1,4 +1,6 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import TodoForm from './components/TodoForm';
+import TodoList from './components/TodoList';
 
 const App = () => {
     const [todos, setTodos] = useState([]);
@@ -9,9 +11,8 @@ const App = () => {
 
     return (
         <div>
-            <TodoForm
-                addTodo={addTodo}
-            />
+             <TodoForm addTodo={addTodo} />
+            <TodoList todos={todos} />
         </div>
     )
 }
